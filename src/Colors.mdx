@@ -1,0 +1,263 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs'
+
+import styles from './docs/colors.module.scss'
+
+<Meta title='Styles/Colors' />
+
+# Colors
+
+```scss
+@use '@design-system/src/settings/colors';
+```
+
+## Brand
+
+<ColorPalette>
+  <ColorItem title='Brand' colors={{ 'colors.$brand': styles.brand }} />
+</ColorPalette>
+
+## Text
+
+<ColorPalette>
+  <ColorItem
+    title='Primary Text'
+    colors={{
+      'colors.$textPrimary': styles.textPrimary,
+      'colors.$textPrimaryDarkMode': styles.textPrimaryDarkMode
+    }}
+  />
+  <ColorItem
+    title='Secondary Text'
+    colors={{
+      'colors.$textSecondary': styles.textSecondary
+    }}
+  />
+  <ColorItem
+    title='Text caption'
+    colors={{
+      'colors.$textCaption': styles.textCaption,
+      'colors.$textCaptionDarkMode': styles.textCaptionDarkMode
+    }}
+  />
+</ColorPalette>
+
+## Buttons and CTA
+
+<ColorPalette>
+  <ColorItem
+    title='Primary Button'
+    colors={{
+      'colors.$btnPrimary': styles.btnPrimary
+    }}
+  />
+  <ColorItem
+    title='Primary Button Hover'
+    colors={{
+      'colors.$btnPrimaryHover': styles.btnPrimaryHover
+    }}
+  />
+</ColorPalette>
+
+## Backgrounds
+
+<ColorPalette>
+  <ColorItem
+    title='Primary Background'
+    colors={{
+      'colors.$surfacePrimary': styles.surfacePrimary,
+      'colors.$surfacePrimaryDarkMode': styles.surfacePrimaryDarkMode
+    }}
+  />
+  <ColorItem
+    title='Secondary Background'
+    colors={{
+      'colors.$surfaceSecondary': styles.surfaceSecondary,
+      'colors.$surfaceSecondaryDarkMode': styles.surfaceSecondaryDarkMode
+    }}
+  />
+</ColorPalette>
+
+## Table
+
+<ColorPalette>
+  <ColorItem
+    title='Divider'
+    colors={{
+      'colors.$dividerBg': styles.dividerBg,
+      'colors.$dividerBgDarkMode': styles.dividerBgDarkMode
+    }}
+  />
+  <ColorItem
+    title='Row Table Shadow'
+    colors={{
+      'colors.$rowTableShadow': styles.rowTableShadow,
+      'colors.$rowTableShadowDarkMode': styles.rowTableShadowDarkMode
+    }}
+  />
+</ColorPalette>
+
+## Switch
+
+<ColorPalette>
+  <ColorItem
+    title='Label Primary'
+    colors={{
+      'colors.$switchLabelPrimary': styles.switchLabelPrimary,
+      'colors.$switchLabelPrimaryDarkMode': styles.switchLabelPrimaryDarkMode
+    }}
+  />
+  <ColorItem
+    title='Switch Background'
+    colors={{
+      'colors.$switchBg': styles.switchBg,
+      'colors.$switchBgDarkMode': styles.switchBgDarkMode
+    }}
+  />
+  <ColorItem
+    title='Switch Pill Background'
+    colors={{
+      'colors.$switchPillBg': styles.switchPillBg,
+      'colors.$switchPillBgDarkMode': styles.switchPillBgDarkMode
+    }}
+  />
+</ColorPalette>
+
+## Sidebar
+
+<ColorPalette>
+  <ColorItem
+    title='Background Primary'
+    colors={{
+      'colors.$sidebarBgPrimary': styles.sidebarBgPrimary,
+      'colors.$sidebarBgPrimaryDarkMode': styles.sidebarBgPrimaryDarkMode
+    }}
+  />
+  <ColorItem
+    title='Background Secondary'
+    colors={{
+      'colors.$sidebarBgSecondary': styles.sidebarBgSecondary,
+      'colors.$sidebarBgSecondaryDarkMode': styles.sidebarBgSecondaryDarkMode
+    }}
+  />
+</ColorPalette>
+
+## Dropdown
+
+<ColorPalette>
+  <ColorItem
+    title='Dropdown Title'
+    colors={{
+      'colors.$dropdownTitle': styles.dropdownTitle,
+      'colors.$dropdownTitleDarkMode': styles.dropdownTitleDarkMode
+    }}
+  />
+  <ColorItem
+    title='Dropdown Label Idle'
+    colors={{
+      'colors.$dropdownLabelIdle': styles.dropdownLabelIdle
+    }}
+  />
+  <ColorItem
+    title='Dropdown Label Active'
+    colors={{
+      'colors.$dropdownLabelActive': styles.dropdownLabelActive,
+      'colors.$dropdownLabelActiveDarkMode': styles.dropdownLabelActiveDarkMode
+    }}
+  />
+  <ColorItem
+    title='Dropdown Background Idle'
+    colors={{
+      'colors.$dropdownBgIdle': styles.dropdownBgIdle,
+      'colors.$dropdownBgIdleDarkMode': styles.dropdownBgIdleDarkMode
+    }}
+  />
+  <ColorItem
+    title='Dropdown Background Active'
+    colors={{
+      'colors.$dropdownBgActive': styles.dropdownLabelActive,
+      'colors.$dropdownBgActiveDarkMode': styles.dropdownLabelActiveDarkMode
+    }}
+  />
+  <ColorItem
+    title='Dropdown Shade'
+    colors={{
+      'colors.$dropdownShade': styles.dropdownShade,
+      'colors.$dropdownShadeDarkMode': styles.dropdownShadeDarkMode
+    }}
+  />
+
+</ColorPalette>
+
+## Kardex
+
+<ColorPalette>
+  <ColorItem
+    title='Label Text Primary'
+    colors={{
+      'colors.$kardexLabelPrimary': styles.kardexLabelPrimary
+    }}
+  />
+  <ColorItem
+    title='Label Text Secondary'
+    colors={{
+      'colors.$kardexLabelSecondary': styles.kardexLabelSecondary,
+      'colors.$kardexLabelSecondaryDarkMode': styles.kardexLabelSecondaryDarkMode
+    }}
+  />
+  <ColorItem
+    title='Background Default'
+    colors={{
+      'colors.$kardexBgDefaultColor': styles.kardexBgDefaultColor,
+      'colors.$kardexBgDefaultColorDarkMode': styles.kardexBgDefaultColorDarkMode
+    }}
+  />
+  <ColorItem
+    title='Background Complete or Approved'
+    colors={{
+      'colors.$kardexBgCompletedOrApproved': styles.kardexBgCompletedOrApproved
+    }}
+  />
+  <ColorItem
+    title='Background In progress'
+    colors={{
+      'colors.$kardexBgInprogress': styles.kardexBgInprogress
+    }}
+  />
+  <ColorItem
+    title='Background Repetition'
+    colors={{
+      'colors.$kardexBgRepetition': styles.kardexBgRepetition
+    }}
+  />
+  <ColorItem
+    title='Background Special'
+    colors={{
+      'colors.$kardexBgSpecial': styles.kardexBgSpecial
+    }}
+  />
+  <ColorItem
+    title='Background Final Drop'
+    colors={{
+      'colors.$kardexBgFinalDrop': styles.kardexBgFinalDrop
+    }}
+  />
+  <ColorItem
+    title='Background Summer Course'
+    colors={{
+      'colors.$kardexBgSummercourse': styles.kardexBgSummercourse
+    }}
+  />
+  <ColorItem
+    title='Background To Choose From'
+    colors={{
+      'colors.$kardexBgToChooseFrom': styles.kardexBgToChooseFrom
+    }}
+  />
+  <ColorItem
+    title='Background Accredited In Repetition or Summer'
+    colors={{
+      'colors.$kardexBgAccreditedInRepetitionOrSummer':
+        styles.kardexBgAccreditedInRepetitionOrSummer
+    }}
+  />
+</ColorPalette>
