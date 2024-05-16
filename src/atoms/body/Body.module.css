@@ -1,8 +1,0 @@
-.parrafo {
-  --h3: 32px;
-  --h4: 40px;
-  --calculated-size: clamp(var(--h3), 30px + 0.6vw, var(--h4));
-
-  font-size: 2rem;
-  font-size: clamp(var(--h3), 1.827rem + 0.748vw, var(--h4));
-}

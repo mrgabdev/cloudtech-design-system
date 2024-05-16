@@ -1,0 +1,54 @@
+@use '../settings/colors';
+@use '../settings/sizes';
+@use '../settings/typography';
+
+:root {
+  --text-primary: #{colors.$text-primary};
+  --bg: #{colors.$surface-primary};
+  --bg-secondary: #{colors.$surface-secondary};
+  --divider: #{colors.$divider-bg};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-primary: #{colors.$text-primary-darkMode};
+    --bg: #{colors.$surface-primary-darkMode};
+    --bg-secondary: #{colors.$surface-secondary-darkMode};
+    --divider: #{colors.$divider-bg-darkMode};
+  }
+}
+
+.light-theme {
+  --text-primary: #{colors.$text-primary};
+  --bg: #{colors.$surface-primary};
+  --bg-secondary: #{colors.$surface-secondary};
+  --divider: #{colors.$divider-bg};
+}
+
+.dark-theme {
+  --text-primary: #{colors.$text-primary-darkMode};
+  --bg: #{colors.$surface-primary-darkMode};
+  --bg-secondary: #{colors.$surface-secondary-darkMode};
+  --divider: #{colors.$divider-bg-darkMode};
+}
+
+.story-dark {
+  background-color: colors.$surface-primary-darkMode;
+  padding: 1rem;
+}
+
+.story-light {
+  background-color: colors.$surface-primary;
+  padding: 0.5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-size: 100%;
+}
+
+body {
+  background-color: var(--bg);
+}

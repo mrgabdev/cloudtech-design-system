@@ -1,0 +1,30 @@
+@use '../../settings/colors';
+
+.btn {
+  display: inline;
+  width: fit-content;
+  padding: 12px 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  border-color: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background-color: colors.$btn-primary;
+
+  &:hover {
+    background-color: colors.$btn-primary-hover;
+  }
+}
+
+.btn--secondary {
+  border: 2px solid colors.$btn-secondary-hover;
+  background-color: colors.$btn-secondary;
+
+  &:hover {
+    background-color: colors.$btn-secondary-hover;
+  }
+}

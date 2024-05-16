@@ -1,0 +1,21 @@
+@use '../../tools/typography' as mixins;
+
+.heading {
+  color: var(--text-primary);
+}
+
+.h1 {
+  @include mixins.heading-01;
+}
+
+.h2 {
+  @include mixins.heading-02;
+}
+
+.h3 {
+  @include mixins.heading-03;
+}
+
+.h4 {
+  @include mixins.heading-04;
+}

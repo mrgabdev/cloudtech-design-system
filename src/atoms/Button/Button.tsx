@@ -1,17 +1,19 @@
-import styles from './styles.module.css'
+'use client'
+
+import styles from './styles.module.scss'
 
 interface Props {
   primary?: boolean
-  backgroundColor?: string
+  type?: 'submit' | 'reset' | 'button' | undefined
   label: string
+  action: () => void
 }
 
-export const Button = ({ primary, backgroundColor, label }: Props) => {
+export const Button = ({ primary = true, type = 'submit', label, action }: Props) => {
+  const btnStyle = primary ? styles['btn--primary'] : styles['btn--secondary']
+
   return (
-    <button
-      className={primary ? styles.btn__primary : styles.btn__secondary}
-      style={{ backgroundColor, color: 'white' }}
-    >
+    <button type={type} onClick={action} className={`${styles.btn} ${btnStyle}`}>
       {label}
     </button>
   )

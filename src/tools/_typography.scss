@@ -1,0 +1,17 @@
+@use '../settings/typography';
+
+@mixin heading-01() {
+  font-size: clamp(typography.$h2, 2.652rem + 1.495vw, typography.$h1);
+}
+
+@mixin heading-02() {
+  font-size: clamp(typography.$h3, 2.326rem + 0.748vw, typography.$h2);
+}
+
+@mixin heading-03() {
+  font-size: clamp(typography.$h4, 1.826rem + 0.748vw, typography.$h3);
+}
+
+@mixin heading-04() {
+  font-size: clamp(typography.$h5, 1.327rem + 0.748vw, typography.$h4);
+}
