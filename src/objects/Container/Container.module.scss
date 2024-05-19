@@ -1,0 +1,13 @@
+@use '../../settings/sizes';
+
+.container {
+  max-width: 1020px;
+  margin: 16px;
+
+  background-color: var(--bg-secondary);
+
+  @media (min-width: sizes.$desktop) {
+    margin: 40px;
+    margin-top: 24px;
+  }
+}
