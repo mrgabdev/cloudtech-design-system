@@ -1,15 +1,16 @@
 @use '../../settings/colors';
 
 .btn {
-  display: inline;
+  display: flex;
+  gap: 0.5em;
+
   width: fit-content;
   padding: 12px 20px;
-  justify-content: center;
-  align-items: center;
   border-radius: 12px;
   border-color: transparent;
-  color: white;
+  color: var(--text-primary);
   cursor: pointer;
+  font-weight: bold;
 }
 
 .btn--primary {
@@ -21,10 +22,23 @@
 }
 
 .btn--secondary {
-  border: 2px solid colors.$btn-secondary-hover;
-  background-color: colors.$btn-secondary;
+  background-color: var(--btn-secondary-bg);
+  border: 2px solid var(--btn-secondary-border);
 
   &:hover {
-    background-color: colors.$btn-secondary-hover;
+    background-color: var(--btn-secondary-hover);
   }
+}
+
+.btn--disabled {
+  color: var(--btn-text-disabled);
+}
+
+.btn--primary.btn--disabled {
+  background-color: var(--btn-primary-disabled);
+}
+
+.btn--secondary.btn--disabled {
+  background-color: var(--btn-secondary-disabled);
+  border-color: var(--btn-secondary-border-disabled);
 }

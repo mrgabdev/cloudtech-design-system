@@ -22,12 +22,12 @@ export default function Home() {
   return (
     <main>
       {/* <Heading tag='h1'>some text</Heading> */}
-      <Button action={openModal} label='Enviar datos' />
+      <Button action={openModal}>Enviar datos</Button>
       {open ? (
         <PopUp
           title='Modificar datos'
           message='Se van a modificar los datos, estas seguro?'
-          button={<Button label='Confirmar' action={hello} />}
+          button={<Button action={hello}>modificar</Button>}
         />
       ) : null}
     </main>

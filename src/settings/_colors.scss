@@ -6,8 +6,6 @@ $_primary-02: #83bf6e;
 $_primary-03: #ff6a55;
 $_primary-04: #8e59ff;
 
-$_hover-primary-01: rgba(42, 134, 255, 0.75);
-
 $_neutral-00: #ffffff;
 $_neutral-01: #fcfcfc;
 $_neutral-02: #f4f4f4;
@@ -142,7 +140,19 @@ $kardex-bg-final-drop: $_kardex-07;
 $brand: $_primary-01;
 
 $btn-primary: $_primary-01;
-$btn-primary-hover: $_hover-primary-01;
+$btn-primary-hover: rgba($_primary-01, 75%);
+$btn-primary-disabled: rgba($_primary-01, 50%);
 
-$btn-secondary: $_neutral-07;
-$btn-secondary-hover: $_neutral-06;
+$btn-secondary: $_neutral-01;
+$btn-secondary-border: $_neutral-03;
+$btn-secondary-hover: $_neutral-03;
+$btn-secondary-disabled: rgba($_neutral-01, 50%);
+$btn-secondary-border-disabled: rgba($_neutral-03, 50%);
+$btn-text-disabled: rgba($text-primary, 75%);
+
+$btn-secondary-darkMode: $_neutral-07;
+$btn-secondary-border-darkMode: $_neutral-06;
+$btn-secondary-hover-darkMode: $_neutral-06;
+$btn-secondary-disabled-darkMode: rgba($_neutral-07, 50%);
+$btn-secondary-border-disabled-darkMode: rgba($_neutral-06, 50%);
+$btn-text-disabled-darkMode: rgba($text-primary-darkMode, 75%);
