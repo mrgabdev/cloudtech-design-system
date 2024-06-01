@@ -1,21 +1,117 @@
 @use '../settings/typography' as t;
 
-@mixin heading-01() {
+@mixin heading {
+  letter-spacing: -0.03em;
+}
+
+@mixin heading-01 {
   font-size: clamp(t.$h2, 2.652rem + 1.495vw, t.$h1);
   line-height: clamp(t.$h2-lh, 2.652rem + 1.495vw, t.$h1-lh);
+  @include heading;
 }
 
-@mixin heading-02() {
+@mixin heading-02 {
   font-size: clamp(t.$h3, 2.326rem + 0.748vw, t.$h2);
   line-height: t.$h2-lh;
+  @include heading;
 }
 
-@mixin heading-03() {
+@mixin heading-03 {
   font-size: clamp(t.$h4, 1.826rem + 0.748vw, t.$h3);
   line-height: clamp(t.$h4-lh, 2.327rem + 0.748vw, t.$h3-lh);
+  @include heading;
 }
 
-@mixin heading-04() {
+@mixin heading-04 {
   font-size: clamp(t.$h5, 1.327rem + 0.748vw, t.$h4);
   line-height: clamp(t.$h5-lh, 1.827rem + 0.748vw, t.$h4-lh);
+  @include heading;
+}
+
+@mixin title-01 {
+  font-size: clamp(t.$title-01-semi, 1.081rem + 0.188vw, t.$title-01-semi-mobile);
+  line-height: t.$title-01-lh;
+  letter-spacing: -0.02em;
+}
+
+@mixin title-01-semi {
+  font-weight: 600;
+  @include title-01;
+}
+
+@mixin title-01-medium {
+  font-weight: 500;
+  @include title-01;
+}
+
+@mixin title-02-semi {
+  font: f.$title-02;
+}
+
+@mixin base {
+  letter-spacing: -0.01em;
+}
+
+@mixin base-01-semi {
+  font: f.$base-01-semi;
+  @include base;
+}
+
+@mixin base-01-bold {
+  font: f.$base-01-bold;
+  @include base;
+}
+
+@mixin base-02-semi {
+  font: f.$base-02-bold;
+  @include base;
+}
+
+@mixin letter-01 {
+  letter-spacing: -0.01em;
+}
+
+@mixin body-01-medium {
+  font: f.$body-01-medium;
+  letter-spacing: -0.015em;
+}
+
+@mixin body-01-semi {
+  font: f.$body-01-semi;
+  @include letter-01;
+}
+
+@mixin body-02-semi {
+  font: f.$body-02-semi;
+  @include letter-01;
+}
+
+@mixin caption-01-semi {
+  font: f.$caption-01-semi;
+  @include letter-01;
+}
+
+@mixin caption-01-medium {
+  font: f.$caption-01-medium;
+  @include letter-01;
+}
+
+@mixin caption-02-bold {
+  font: f.$caption-02-bold;
+  @include letter-01;
+}
+
+@mixin caption-02-medium {
+  font: f.$caption-02-medium;
+  @include letter-01;
+}
+
+@mixin btn-01 {
+  font: f.$btn-01;
+  @include letter-01;
+}
+
+@mixin btn-02 {
+  font: f.$btn-02;
+  @include letter-01;
 }
