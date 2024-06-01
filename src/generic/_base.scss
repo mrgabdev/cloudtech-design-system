@@ -4,6 +4,8 @@
 
 :root {
   --text-primary: #{colors.$text-primary};
+  --text-secondary: #{colors.$text-secondary};
+
   --bg: #{colors.$surface-primary};
   --bg-secondary: #{colors.$surface-secondary};
   --divider: #{colors.$divider-bg};
@@ -16,6 +18,9 @@
   --btn-secondary-disabled: #{colors.$btn-secondary-disabled};
   --btn-text-disabled: #{colors.$btn-text-disabled};
   --btn-secondary-border-disabled: #{colors.$btn-secondary-border-disabled};
+
+  --switch-bg: #{colors.$switch-bg};
+  --switch-pill-bg: #{colors.$switch-pill-bg};
 }
 
 @media (prefers-color-scheme: dark) {
@@ -31,6 +36,9 @@
     --btn-secondary-disabled: #{colors.$btn-secondary-disabled-darkMode};
     --btn-text-disabled: #{colors.$btn-text-disabled-darkMode};
     --btn-secondary-border-disabled: #{colors.$btn-secondary-border-disabled-darkMode};
+
+    --switch-bg: #{colors.$switch-bg-darkMode};
+    --switch-pill-bg: #{colors.$switch-pill-bg-darkMode};
   }
 }
 
@@ -46,6 +54,9 @@
   --btn-secondary-disabled: #{colors.$btn-secondary-disabled};
   --btn-text-disabled: #{colors.$btn-text-disabled};
   --btn-secondary-border-disabled: #{colors.$btn-secondary-border-disabled};
+
+  --switch-bg: #{colors.$switch-bg};
+  --switch-pill-bg: #{colors.$switch-pill-bg};
 }
 
 .dark-theme {
@@ -60,6 +71,9 @@
   --btn-secondary-disabled: #{colors.$btn-secondary-disabled-darkMode};
   --btn-text-disabled: #{colors.$btn-text-disabled-darkMode};
   --btn-secondary-border-disabled: #{colors.$btn-secondary-border-disabled-darkMode};
+
+  --switch-bg: #{colors.$switch-bg-darkMode};
+  --switch-pill-bg: #{colors.$switch-pill-bg-darkMode};
 }
 
 .story-dark {
@@ -82,4 +96,8 @@ html {
 body {
   background-color: var(--bg);
   color: var(--text-primary);
+}
+
+svg > path {
+  fill: var(--text-primary);
 }
