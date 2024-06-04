@@ -19,7 +19,11 @@ export const Update: Story = {
     title: 'Actualización de datos',
     message:
       '¿Estás seguro de que quieres actualizar tu perfil con la nueva información? Revisa todos los datos ingresados y, si estás listo, haz clic en &apos;Confirmar&apos; para proceder con la actualización.',
-    button: <Button primary action={() => alert('Datos enviados')} label='Confirmar cambios' />
+    button: (
+      <Button primary action={() => alert('Datos enviados')}>
+        Confirmar cambios
+      </Button>
+    )
   },
   decorators: [
     (Story) => (
