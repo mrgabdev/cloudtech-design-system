@@ -98,6 +98,10 @@ body {
   color: var(--text-primary);
 }
 
+svg {
+  width: clamp(0.938rem, 0.777rem + 0.804vw, 1.5rem);
+}
+
 svg > path {
   fill: var(--text-primary);
 }

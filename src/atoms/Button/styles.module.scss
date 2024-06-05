@@ -2,9 +2,10 @@
 
 .btn {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 0.5em;
 
-  width: fit-content;
   padding: 12px 20px;
   border-radius: 12px;
   border-color: transparent;
@@ -15,6 +16,7 @@
 
 .btn--primary {
   background-color: colors.$btn-primary;
+  color: colors.$btn-primary-text;
 
   &:hover {
     background-color: colors.$btn-primary-hover;
