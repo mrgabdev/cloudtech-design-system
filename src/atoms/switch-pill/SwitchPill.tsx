@@ -13,7 +13,7 @@ export const SwitchPill = ({ active = false, children, icon, onClick = () => {} 
   return (
     <div className={`${style.switch} ${active && style['switch--active']}`} onClick={onClick}>
       <div className={style['switch-item']}>
-        {icon ? icon : null}
+        <div className={style['switch-icon']}>{icon ? icon : null}</div>
         <p className={style['switch-item__text']}>{children}</p>
       </div>
     </div>
