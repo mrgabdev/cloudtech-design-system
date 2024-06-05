@@ -5,6 +5,7 @@ import { BriefCaseFilled, BriefCaseOutline } from '@/icons/briefcase'
 import { CoffeFilled, CoffeOutline } from '@/icons/coffee'
 import { ProfileCircledFilled, ProfileCircledOutline } from '@/icons/profile_circled'
 import { SwitchContainer } from '@/objects'
+import styles from './SwitchRoles.module.scss'
 
 enum Roles {
   Aspirante = 'Aspirante',
@@ -44,6 +45,7 @@ export const SwitchRoles = ({ currentRole, toggleRole }: Props) => {
           active={currentRole === role}
           onClick={() => toggleRole(role)}
           icon={currentRole === role ? activeIcon : icon}
+          className={styles['pill-rol']}
         >
           {role}
         </SwitchPill>

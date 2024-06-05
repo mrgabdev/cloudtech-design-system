@@ -1,0 +1,11 @@
+@use '../../settings/sizes' as s;
+
+.pill-rol svg {
+  display: none;
+}
+
+@media screen and (min-width: s.$desktop) {
+  .pill-rol svg {
+    display: block;
+  }
+}

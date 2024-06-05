@@ -7,11 +7,21 @@ interface Props {
   children: React.ReactNode
   icon?: React.ReactNode
   onClick?: () => any
+  className?: string
 }
 
-export const SwitchPill = ({ active = false, children, icon, onClick = () => {} }: Props) => {
+export const SwitchPill = ({
+  active = false,
+  children,
+  icon,
+  onClick = () => {},
+  className = ''
+}: Props) => {
   return (
-    <div className={`${style.switch} ${active && style['switch--active']}`} onClick={onClick}>
+    <div
+      className={`${style.switch} ${active && style['switch--active']} ${className}`}
+      onClick={onClick}
+    >
       <div className={style['switch-item']}>
         <div className={style['switch-icon']}>{icon ? icon : null}</div>
         <p className={style['switch-item__text']}>{children}</p>
