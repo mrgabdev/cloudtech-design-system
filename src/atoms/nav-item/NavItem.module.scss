@@ -7,6 +7,9 @@
   align-items: center;
   gap: 12px;
   cursor: pointer;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
 .navitem--active {
@@ -59,7 +62,7 @@
 }
 
 .navitem--active > .navitem__chevron--active {
-  animation: chevron-rotate 1s ease-out forwards;
+  animation: chevron-rotate 0.1s ease-out forwards;
 }
 
 @keyframes chevron-rotate {

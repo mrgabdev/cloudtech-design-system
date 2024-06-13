@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { NavItem } from './NavItem'
 import { HomeFilled, HomeOutline } from '@/icons/home'
+import { useState } from 'react'
 
 const meta: Meta<typeof NavItem> = {
   title: 'Atoms/NavItem',
@@ -27,17 +28,22 @@ export const Base: Story = {
   ]
 }
 
-export const Active: Story = {
-  args: {
-    active: true,
-    children: 'Home',
-    startIcon: <HomeFilled />
-  },
-  decorators: [
-    (Story) => (
-      <div style={{ width: '300px' }}>
-        <Story />
-      </div>
-    )
-  ]
+export const Interactive = () => {
+  const [active, setActive] = useState<boolean>(false)
+
+  const toggleActive = () => {
+    setActive((prev) => !prev)
+  }
+
+  return (
+    <div style={{ width: '300px' }}>
+      <NavItem
+        active={active}
+        startIcon={active ? <HomeFilled /> : <HomeOutline />}
+        onClick={toggleActive}
+      >
+        Home
+      </NavItem>
+    </div>
+  )
 }
