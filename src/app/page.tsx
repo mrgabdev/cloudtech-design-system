@@ -1,5 +1,6 @@
 'use client'
 
+import { NavItem } from '@/atoms'
 import { Button } from '@/atoms/Button/Button'
 import { Heading } from '@/atoms/heading/Heading'
 import { SwitchRoles } from '@/molecules/switch-roles/SwitchRoles'
@@ -19,18 +20,21 @@ export default function Home() {
   }
 
   return (
-    <div style={{ padding: '39.9px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
-      <Heading tag='h1'>Iniciar sesion</Heading>
+    // <div style={{ padding: '39.9px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
+    //   <Heading tag='h1'>Iniciar sesion</Heading>
 
-      <SwitchRoles currentRole={currentRole} toggleRole={toggleRole} />
+    //   <SwitchRoles currentRole={currentRole} toggleRole={toggleRole} />
 
-      <input type='text' placeholder='CURP' />
-      <input type='text' placeholder='Clave de acceso' />
+    //   <input type='text' placeholder='CURP' />
+    //   <input type='text' placeholder='Clave de acceso' />
 
-      <Button primary action={() => {}}>
-        Continuar
-      </Button>
-      <p>This site is protected by reCAPTCHA and the Google Privacy Policy.</p>
+    //   <Button primary action={() => {}}>
+    //     Continuar
+    //   </Button>
+    //   <p>This site is protected by reCAPTCHA and the Google Privacy Policy.</p>
+    // </div>
+    <div>
+      <NavItem active>Home</NavItem>
     </div>
   )
 }

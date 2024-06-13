@@ -1,0 +1,72 @@
+.navitem {
+  padding: 12px;
+  list-style: none;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.navitem--active {
+  color: var(--text-primary);
+  background-color: var(--navigation-item-bg);
+  box-shadow: var(--box-shadow);
+}
+
+.navitem__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+}
+
+.navitem__icon > svg > circle {
+  stroke: var(--text-secondary);
+}
+
+.navitem__icon > svg > path {
+  fill: var(--text-secondary);
+}
+
+.navitem--active > .navitem__icon > svg > circle,
+.navitem--active > .navitem__icon > svg > path {
+  fill: var(--text-primary);
+  stroke: var(--bg-primary);
+}
+
+.navitem__text {
+  color: var(--text-secondary);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.navitem--active > .navitem__text {
+  color: var(--text-primary);
+}
+
+.navitem__chevron {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: auto;
+
+  width: 24px;
+  height: 24px;
+}
+
+.navitem--active > .navitem__chevron--active {
+  animation: chevron-rotate 1s ease-out forwards;
+}
+
+@keyframes chevron-rotate {
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(-180deg);
+  }
+}

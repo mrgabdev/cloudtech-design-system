@@ -157,3 +157,13 @@ $btn-secondary-hover-darkMode: $_neutral-06;
 $btn-secondary-disabled-darkMode: rgba($_neutral-07, 50%);
 $btn-secondary-border-disabled-darkMode: rgba($_neutral-06, 50%);
 $btn-text-disabled-darkMode: rgba($text-primary-darkMode, 75%);
+
+$navigation-item-bg: $_neutral-03;
+$navigation-item-bg-darkMode: $_neutral-06;
+
+$box-shadow-lightMode:
+  0px -2px 1px 0px rgba(0, 0, 0, 0.05) inset,
+  0px 1px 1px 0px #fff inset;
+$box-shadow-darkMode:
+  0px -2px 1px 0px rgba(0, 0, 0, 0.4) inset,
+  0px 1px 1px 0px rgba(255, 255, 255, 0.11) inset;

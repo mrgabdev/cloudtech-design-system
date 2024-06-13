@@ -21,6 +21,9 @@
 
   --switch-bg: #{colors.$switch-bg};
   --switch-pill-bg: #{colors.$switch-pill-bg};
+
+  --navigation-item-bg: #{colors.$navigation-item-bg};
+  --box-shadow: #{colors.$box-shadow-lightMode};
 }
 
 @media (prefers-color-scheme: dark) {
@@ -39,6 +42,9 @@
 
     --switch-bg: #{colors.$switch-bg-darkMode};
     --switch-pill-bg: #{colors.$switch-pill-bg-darkMode};
+
+    --navigation-item-bg: #{colors.$navigation-item-bg-darkMode};
+    --box-shadow: #{colors.$box-shadow-darkMode};
   }
 }
 
@@ -57,6 +63,9 @@
 
   --switch-bg: #{colors.$switch-bg};
   --switch-pill-bg: #{colors.$switch-pill-bg};
+
+  --navigation-item-bg: #{colors.$navigation-item-bg};
+  --box-shadow: #{colors.$box-shadow-lightMode};
 }
 
 .dark-theme {
@@ -74,6 +83,9 @@
 
   --switch-bg: #{colors.$switch-bg-darkMode};
   --switch-pill-bg: #{colors.$switch-pill-bg-darkMode};
+
+  --navigation-item-bg: #{colors.$navigation-item-bg-darkMode};
+  --box-shadow: #{colors.$box-shadow-darkMode};
 }
 
 .story-dark {
@@ -100,8 +112,4 @@ body {
 
 svg {
   width: clamp(0.938rem, 0.777rem + 0.804vw, 1.5rem);
-}
-
-svg > path {
-  fill: var(--text-primary);
 }
