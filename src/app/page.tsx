@@ -1,6 +1,6 @@
 'use client'
 
-import { NavItem } from '@/atoms'
+import { NavItem } from '@/molecules'
 import { Button } from '@/atoms/Button/Button'
 import { Heading } from '@/atoms/heading/Heading'
 import { SwitchRoles } from '@/molecules/switch-roles/SwitchRoles'
@@ -33,8 +33,6 @@ export default function Home() {
     //   </Button>
     //   <p>This site is protected by reCAPTCHA and the Google Privacy Policy.</p>
     // </div>
-    <div>
-      <NavItem active>Home</NavItem>
-    </div>
+    <div>{/* <NavItem active>Home</NavItem> */}</div>
   )
 }
