@@ -8,7 +8,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mrgabdev/cloudtech-design-system.git"
+    "url": "git+https://github.com/mrgabdev/cloudtech-design-system.git"
   },
   "keywords": [
     "design-system",
@@ -58,15 +58,18 @@
     "react-dom": "^18",
     "sass": "^1.77.1"
   },
-  "plugins": [
-    "@semantic-release/commit-analyzer",
-    "@semantic-release/release-notes-generator",
-    "@semantic-release/changelog",
-    "@semantic-release/github",
-    "@semantic-release/npm",
-    "@semantic-release/git"
-  ],
   "files": [
     "dist"
-  ]
+  ],
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm"
+    ]
+  }
 }
