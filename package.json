@@ -1,7 +1,8 @@
 {
   "name": "cloudtech-design-system",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main": "dist/index.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -37,5 +38,8 @@
     "storybook": "^8.0.5",
     "tsconfig-paths-webpack-plugin": "^4.1.0",
     "typescript": "^5"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }

@@ -1,0 +1,6 @@
+export * from './briefcase'
+export * from './coffee'
+export * from './home'
+export * from './sun'
+export * from './moon'
+export * from './profile_circled'
