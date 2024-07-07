@@ -1,8 +1,22 @@
 {
-  "name": "@cloudtech/cloudtech-design-system",
-  "version": "0.1.0",
+  "name": "@mrgab0/cloudtech-design-system",
+  "description": "A design system for CloudTech applications",
+  "version": "1.0.0",
   "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrgabdev/cloudtech-design-system.git"
+  },
+  "keywords": [
+    "design-system",
+    "react",
+    "cloudtech",
+    "storybook"
+  ],
+  "author": "Gabriel Escobar",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -11,12 +25,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
-  "dependencies": {
-    "next": "14.1.4",
-    "react": "^18",
-    "react-dom": "^18",
-    "sass": "^1.77.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@chromatic-com/storybook": "^1.2.25",
     "@storybook/addon-essentials": "^8.0.5",
@@ -37,7 +46,17 @@
     "semantic-release": "^24.0.0",
     "storybook": "^8.0.5",
     "tsconfig-paths-webpack-plugin": "^4.1.0",
-    "typescript": "^5"
+    "typescript": "^5",
+    "next": "14.1.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "sass": "^1.77.1"
+  },
+  "peerDependencies": {
+    "next": "14.1.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "sass": "^1.77.1"
   },
   "plugins": [
     "@semantic-release/commit-analyzer",
