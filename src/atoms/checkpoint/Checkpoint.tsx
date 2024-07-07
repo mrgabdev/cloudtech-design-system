@@ -6,5 +6,5 @@ interface Props {
 }
 
 export const Checkpoint = ({ count, active }: Props) => {
-  return <div>{count}</div>
+  return <div className={style.checkpoint}> {count}</div>
 }

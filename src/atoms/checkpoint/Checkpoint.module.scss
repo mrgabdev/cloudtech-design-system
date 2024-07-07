@@ -1,3 +1,10 @@
 .checkpoint {
-  background: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: grey;
+  width: 36.667px;
+  height: 36.667px;
+  flex-shrink: 0;
+  border-radius: 1em;
 }
