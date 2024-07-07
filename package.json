@@ -1,8 +1,8 @@
 {
-  "name": "cloudtech-design-system",
+  "name": "@cloudtech/cloudtech-design-system",
   "version": "0.1.0",
-  "private": false,
   "main": "dist/index.js",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -39,6 +39,14 @@
     "tsconfig-paths-webpack-plugin": "^4.1.0",
     "typescript": "^5"
   },
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    "@semantic-release/github",
+    "@semantic-release/npm",
+    "@semantic-release/git"
+  ],
   "files": [
     "dist"
   ]
