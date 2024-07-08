@@ -1,7 +1,7 @@
 'use client'
 
 import { NavItem } from '@/molecules'
-import { Button } from '@/atoms/Button/Button'
+import { Button } from '@/atoms/button/Button'
 import { Heading } from '@/atoms/heading/Heading'
 import { SwitchRoles } from '@/molecules/switch-roles/SwitchRoles'
 import { useState } from 'react'
