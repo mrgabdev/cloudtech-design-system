@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { SwitchPill } from './SwitchPill'
-import { ProfileCircledFilled, ProfileCircledOutline } from '@/icons/profile_circled'
+import { ProfileCircledFilled, ProfileCircledOutline } from '../../icons/profile_circled'
 import { StoryBookDark, StoryBookLight } from '@/objects/StoryBookTheme'
 
 const meta: Meta<typeof SwitchPill> = {

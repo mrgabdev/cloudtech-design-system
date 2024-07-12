@@ -1,10 +1,10 @@
 'use client'
 
-import { SwitchPill } from '@/atoms'
-import { SunFilled, SunOutline } from '@/icons/sun'
-import { MoonFilled, MoonOutline } from '@/icons/moon'
+import { SwitchPill } from '../../atoms'
+import { SunFilled, SunOutline } from '../../icons/sun'
+import { MoonFilled, MoonOutline } from '../../icons/moon'
 import { useTheme } from './useTheme'
-import { SwitchContainer } from '@/objects'
+import { SwitchContainer } from '../../objects'
 
 export const SwitchTheme = () => {
   const { isDark, isLight, toggleTheme, Theme } = useTheme()

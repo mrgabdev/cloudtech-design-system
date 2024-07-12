@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { NavItem } from './NavItem'
-import { HomeFilled, HomeOutline } from '@/icons/home'
+import { HomeFilled, HomeOutline } from '../../icons/home'
 import { useState } from 'react'
-import { SubMenu } from '@/atoms/sub-menu/SubMenu'
+import { SubMenu } from '../../atoms/sub-menu/SubMenu'
 
 const meta: Meta<typeof NavItem> = {
   title: 'Molecules/NavItem',

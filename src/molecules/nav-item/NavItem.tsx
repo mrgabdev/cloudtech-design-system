@@ -1,6 +1,6 @@
 'use client'
 
-import { SubMenu } from '@/atoms/sub-menu/SubMenu'
+import { SubMenu } from '../../atoms/sub-menu/SubMenu'
 import style from './NavItem.module.scss'
 import { Placeholder, ChevronDown } from './icon'
 import { useState } from 'react'
