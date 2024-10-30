@@ -3,98 +3,59 @@
 @use '../settings/typography';
 
 :root {
-  --text-primary: #{colors.$text-primary};
-  --text-secondary: #{colors.$text-secondary};
+  --neutral-1: #{colors.$neutral-01};
+  --neutral-2: #{colors.$neutral-02};
+  --neutral-3: #{colors.$neutral-03};
+  --text-primary: #{colors.$neutral-06};
+  --text-secondary: #{colors.$neutral-04};
 
-  --bg: #{colors.$surface-primary};
-  --bg-secondary: #{colors.$surface-secondary};
-  --divider: #{colors.$divider-bg};
-
-  --btn-primary-disabled: #{colors.$btn-primary-disabled};
-
-  --btn-secondary-bg: #{colors.$btn-secondary};
-  --btn-secondary-border: #{colors.$btn-secondary-border};
-  --btn-secondary-hover: #{colors.$btn-secondary-hover};
-  --btn-secondary-disabled: #{colors.$btn-secondary-disabled};
-  --btn-text-disabled: #{colors.$btn-text-disabled};
-  --btn-secondary-border-disabled: #{colors.$btn-secondary-border-disabled};
-
-  --switch-bg: #{colors.$switch-bg};
-  --switch-pill-bg: #{colors.$switch-pill-bg};
-
-  --navigation-item-bg: #{colors.$navigation-item-bg};
+  --primary: #{colors.$primary-01};
+  --primary-2: #{colors.$primary-02};
+  --primary-3: #{colors.$primary-03};
+  --primary-4: #{colors.$primary-04};
   --box-shadow: #{colors.$box-shadow-lightMode};
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text-primary: #{colors.$text-primary-darkMode};
-    --bg: #{colors.$surface-primary-darkMode};
-    --bg-secondary: #{colors.$surface-secondary-darkMode};
-    --divider: #{colors.$divider-bg-darkMode};
+    --neutral-1: #{colors.$neutral-07};
+    --neutral-2: #{colors.$neutral-08};
+    --neutral-3: #{colors.$neutral-06};
+    --text-primary: #{colors.$neutral-01};
 
-    --btn-secondary-bg: #{colors.$btn-secondary-darkMode};
-    --btn-secondary-border: #{colors.$btn-secondary-border-darkMode};
-    --btn-secondary-hover: #{colors.$btn-secondary-hover-darkMode};
-    --btn-secondary-disabled: #{colors.$btn-secondary-disabled-darkMode};
-    --btn-text-disabled: #{colors.$btn-text-disabled-darkMode};
-    --btn-secondary-border-disabled: #{colors.$btn-secondary-border-disabled-darkMode};
-
-    --switch-bg: #{colors.$switch-bg-darkMode};
-    --switch-pill-bg: #{colors.$switch-pill-bg-darkMode};
-
-    --navigation-item-bg: #{colors.$navigation-item-bg-darkMode};
     --box-shadow: #{colors.$box-shadow-darkMode};
   }
 }
 
 .light-theme {
-  --text-primary: #{colors.$text-primary};
-  --bg: #{colors.$surface-primary};
-  --bg-secondary: #{colors.$surface-secondary};
-  --divider: #{colors.$divider-bg};
+  --neutral-1: #{colors.$neutral-01};
+  --neutral-2: #{colors.$neutral-02};
+  --neutral-3: #{colors.$neutral-03};
+  --text-primary: #{colors.$neutral-06};
+  --text-secondary: #{colors.$neutral-04};
 
-  --btn-secondary-bg: #{colors.$btn-secondary};
-  --btn-secondary-border: #{colors.$btn-secondary-border};
-  --btn-secondary-hover: #{colors.$btn-secondary-hover};
-  --btn-secondary-disabled: #{colors.$btn-secondary-disabled};
-  --btn-text-disabled: #{colors.$btn-text-disabled};
-  --btn-secondary-border-disabled: #{colors.$btn-secondary-border-disabled};
-
-  --switch-bg: #{colors.$switch-bg};
-  --switch-pill-bg: #{colors.$switch-pill-bg};
-
-  --navigation-item-bg: #{colors.$navigation-item-bg};
+  --primary: #{colors.$primary-01};
+  --primary-2: #{colors.$primary-02};
+  --primary-3: #{colors.$primary-03};
+  --primary-4: #{colors.$primary-04};
   --box-shadow: #{colors.$box-shadow-lightMode};
 }
 
 .dark-theme {
-  --text-primary: #{colors.$text-primary-darkMode};
-  --bg: #{colors.$surface-primary-darkMode};
-  --bg-secondary: #{colors.$surface-secondary-darkMode};
-  --divider: #{colors.$divider-bg-darkMode};
-
-  --btn-secondary-bg: #{colors.$btn-secondary-darkMode};
-  --btn-secondary-border: #{colors.$btn-secondary-border-darkMode};
-  --btn-secondary-hover: #{colors.$btn-secondary-hover-darkMode};
-  --btn-secondary-disabled: #{colors.$btn-secondary-disabled-darkMode};
-  --btn-text-disabled: #{colors.$btn-text-disabled-darkMode};
-  --btn-secondary-border-disabled: #{colors.$btn-secondary-border-disabled-darkMode};
-
-  --switch-bg: #{colors.$switch-bg-darkMode};
-  --switch-pill-bg: #{colors.$switch-pill-bg-darkMode};
-
-  --navigation-item-bg: #{colors.$navigation-item-bg-darkMode};
+  --neutral-1: #{colors.$neutral-07};
+  --neutral-2: #{colors.$neutral-08};
+  --neutral-3: #{colors.$neutral-06};
+  --text-primary: #{colors.$neutral-01};
   --box-shadow: #{colors.$box-shadow-darkMode};
 }
 
 .story-dark {
-  background-color: colors.$surface-primary-darkMode;
+  background-color: gray;
   padding: 1rem;
 }
 
 .story-light {
-  background-color: colors.$surface-primary;
+  background-color: whitesmoke;
   padding: 0.5rem;
 }
 
@@ -106,7 +67,7 @@ html {
 }
 
 body {
-  background-color: var(--bg);
+  background-color: var(--neutral-2);
   color: var(--text-primary);
 }
 

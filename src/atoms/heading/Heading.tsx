@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import style from './Heading.module.scss'
 
-type HeadingTag = 'h1' | 'h2' | 'h3' | 'h4'
+type HeadingTag = 'h1' | 'h2' | 'h3' | 'h4' | 'legend'
 
 interface Props {
   tag?: HeadingTag

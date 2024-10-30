@@ -1,7 +1,7 @@
 @use '../../settings/sizes' as s;
 
 .switch {
-  background: var(--switch-bg);
+  background: var(--neutral-2);
   border-radius: 1em;
   cursor: pointer;
   width: 100%;
@@ -34,7 +34,7 @@
 }
 
 .switch--active {
-  background-color: var(--switch-pill-bg);
+  background-color: var(--neutral-1);
   color: var(--text-primary);
   box-shadow: var(--box-shadow);
 }

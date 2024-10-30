@@ -1,5 +1,3 @@
-@use '../../settings/colors';
-
 .btn {
   display: flex;
   align-items: center;
@@ -15,32 +13,32 @@
 }
 
 .btn--primary {
-  background-color: colors.$btn-primary;
-  color: colors.$btn-primary-text;
+  background-color: var(--primary);
+  color: var(--text-primary);
 
   &:hover {
-    background-color: colors.$btn-primary-hover;
+    background-color: rgba(var(--primary), 75%);
   }
 }
 
 .btn--secondary {
-  background-color: var(--btn-secondary-bg);
-  border: 2px solid var(--btn-secondary-border);
+  background-color: var(--neutral-1);
+  border: 2px solid var(--neutral-3);
 
   &:hover {
-    background-color: var(--btn-secondary-hover);
+    background-color: var(--neutral-3);
   }
 }
 
 .btn--disabled {
-  color: var(--btn-text-disabled);
+  color: rgba(var(--text-primary), 75%);
 }
 
 .btn--primary.btn--disabled {
-  background-color: var(--btn-primary-disabled);
+  background-color: rgba(var(--primary), 50%);
 }
 
 .btn--secondary.btn--disabled {
-  background-color: var(--btn-secondary-disabled);
-  border-color: var(--btn-secondary-border-disabled);
+  background-color: rgba(var(--neutral-1), 50%);
+  border-color: rgba(var(--neutral-3), 50%);
 }

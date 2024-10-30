@@ -21,10 +21,10 @@
   }
 
   path:first-of-type {
-    fill: var(--bg-secondary);
+    fill: var(--neutral-1);
   }
   path:last-of-type {
-    stroke: var(--bg-secondary);
+    stroke: var(--neutral-1);
   }
 }
 
@@ -48,7 +48,7 @@
 
 .submenu__item--active {
   color: var(--text-primary);
-  background-color: var(--navigation-item-bg);
+  background-color: var(--neutral-3);
   box-shadow: var(--box-shadow);
 }
 

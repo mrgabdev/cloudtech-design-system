@@ -1,0 +1,20 @@
+.input-container {
+  position: relative;
+}
+
+.input {
+  background-color: var(--neutral-2);
+  color: var(--text-primary);
+  outline: transparent 1px;
+  border: transparent 1px;
+  border-radius: 12px;
+  height: 48px;
+  width: 100%;
+  padding: 12px;
+  caret-color: var(--primary);
+}
+
+.input::placeholder {
+  font-weight: 700;
+  color: var(--neutral-1);
+}

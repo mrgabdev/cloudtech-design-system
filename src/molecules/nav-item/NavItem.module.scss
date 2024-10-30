@@ -19,7 +19,7 @@
 
 .navitem--active {
   color: var(--text-primary);
-  background-color: var(--navigation-item-bg);
+  background-color: var(--neutral-3);
   box-shadow: var(--box-shadow);
 }
 
@@ -42,7 +42,7 @@
 .navitem--active > .navitem__icon > svg > circle,
 .navitem--active > .navitem__icon > svg > path {
   fill: var(--text-primary);
-  stroke: var(--bg-primary);
+  stroke: var(--neutral-2);
 }
 
 .navitem__text {

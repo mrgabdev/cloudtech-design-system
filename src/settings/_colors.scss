@@ -1,165 +1,38 @@
-/* Variables que son privadas para evitar su alteramiento
-si quieres cambiar un nombre o un color hazlo con conciencia
-*/
-$_primary-01: #2a85ff;
-$_primary-02: #83bf6e;
-$_primary-03: #ff6a55;
-$_primary-04: #8e59ff;
+$primary-01: #2a85ff;
+$primary-02: #83bf6e;
+$primary-03: #ff6a55;
+$primary-04: #8e59ff;
 
-$_neutral-00: #ffffff;
-$_neutral-01: #fcfcfc;
-$_neutral-02: #f4f4f4;
-$_neutral-03: #efefef;
-$_neutral-04: #6f767e;
-$_neutral-05: #33383f;
-$_neutral-06: #272b30;
-$_neutral-07: #1a1d1f;
-$_neutral-08: #111315;
+$neutral-00: #ffffff;
+$neutral-01: #fcfcfc;
+$neutral-02: #f4f4f4;
+$neutral-03: #efefef;
+$neutral-04: #6f767e;
+$neutral-05: #33383f;
+$neutral-06: #272b30;
+$neutral-07: #1a1d1f;
+$neutral-08: #111315;
 
-$_shades-04-75: rgba(154, 159, 165, 1);
-$_shades-02-50: rgba(244, 244, 244, 0.5);
-$_shades-dark-04-50: rgba(111, 118, 126, 1);
-$_shades-dark-08-over-07-50: rgba(17, 19, 21, 0.5);
-$_shades-dark-04-40: rgba(111, 118, 126, 0.4);
-$_shades-dark-06-30: rgba(39, 43, 48, 0.3);
+$shades-04-75: rgba(154, 159, 165, 1);
+$shades-02-50: rgba(244, 244, 244, 0.5);
+$shades-dark-04-50: rgba(111, 118, 126, 1);
+$shades-dark-08-over-07-50: rgba(17, 19, 21, 0.5);
+$shades-dark-04-40: rgba(111, 118, 126, 0.4);
+$shades-dark-06-30: rgba(39, 43, 48, 0.3);
 
-$_secondary-01: rgba(255, 188, 153, 1);
-$_secondary-02: rgba(202, 189, 255, 1);
-$_secondary-03: rgba(177, 229, 252, 1);
-$_secondary-04: rgba(181, 228, 202, 1);
-$_secondary-05: rgba(255, 216, 141, 1);
+$secondary-01: rgba(255, 188, 153, 1);
+$secondary-02: rgba(202, 189, 255, 1);
+$secondary-03: rgba(177, 229, 252, 1);
+$secondary-04: rgba(181, 228, 202, 1);
+$secondary-05: rgba(255, 216, 141, 1);
 
-$_kardex-01: #ff7f00;
-$_kardex-02: #ffd300;
-$_kardex-03: #ff00f5;
-$_kardex-04: #d10c0c;
-$_kardex-05: #4fb5ff;
-$_kardex-06: #adaaaa;
-$_kardex-07: #010038;
-
-/* Variables para su uso, lo mas delicado es el nombre de la variable, si quieres cambia el nombre y su valor pero ten cuidado.
-*/
-
-// Color
-$surface-primary: $_neutral-02;
-$surface-primary-darkMode: $_neutral-08;
-
-$surface-secondary: $_neutral-01;
-$surface-secondary-darkMode: $_neutral-07;
-
-$text-primary: $_neutral-06;
-$text-primary-darkMode: $_neutral-03;
-
-$text-secondary: $_neutral-04;
-
-$text-caption: $_shades-04-75;
-$text-caption-darkMode: $_shades-dark-04-50;
-
-$divider-bg: $_neutral-02;
-$divider-bg-darkMode: $_neutral-06;
-
-$row-table-shadow: $_shades-02-50;
-$row-table-shadow-darkMode: $_shades-dark-06-30;
-
-// Color > Switch
-$switch-label-primary: $_neutral-07;
-$switch-label-primary-darkMode: $_neutral-01;
-
-$switch-bg: $_neutral-02;
-$switch-bg-darkMode: $_neutral-08;
-
-$switch-pill-bg: $_neutral-01;
-$switch-pill-bg-darkMode: $_neutral-06;
-
-// Color > Sidebar
-$sidebar-bg-primary: $_neutral-01;
-$sidebar-bg-primary-darkMode: $_neutral-07;
-
-$sidebar-bg-secondary: $_neutral-02;
-$sidebar-bg-secondary-darkMode: $_neutral-08;
-
-// Color > Progress bar
-$progressbar-idle: $_neutral-04;
-
-$progressbar-label-primary-active: $_neutral-07;
-$progressbar-label-primary-active-darkMode: $_neutral-01;
-
-$progressbar-bg-active: $_neutral-03;
-$progressbar-bg-active-darkMode: $_neutral-06;
-
-// Color > Close Message
-$closemessage-label: $_neutral-05;
-$closemessage-label-darkMode: $_neutral-03;
-
-$closemessage-bg: $_neutral-03;
-$closemessage-bg-darkMode: $_neutral-06;
-
-// Color > Dropdown
-$dropdown-label-idle: $_neutral-04;
-
-$dropdown-label-active: $_neutral-07;
-$dropdown-label-active-darkMode: $_neutral-01;
-
-$dropdown-bg-idle: $_neutral-00;
-$dropdown-bg-idle-darkMode: $_neutral-07;
-
-$dropdown-bg-active: $_neutral-01;
-$dropdown-bg-active-darkMode: $_neutral-08;
-
-$dropdown-shade: $_neutral-03;
-$dropdown-shade-darkMode: $_neutral-06;
-
-$dropdown-title: $_neutral-05;
-$dropdown-title-darkMode: $_neutral-03;
-
-// Color > Kardex System
-$kardex-bg-completed-or-approved: $_primary-01;
-
-$kardex-bg-inprogress: $_primary-04;
-
-$kardex-bg-special: $_kardex-04;
-
-$kardex-bg-summercourse: $_kardex-01;
-
-$kardex-bg-to-choose-from: $_kardex-03;
-
-$kardex-bg-default-color: $_neutral-03;
-$kardex-bg-default-color-darkMode: $_neutral-06;
-
-$kardex-bg-accredited-in-repetition-or-summer: $_kardex-05;
-
-$kardex-bg-repetition: $_kardex-02;
-
-$kardex-label-primary: $_neutral-00;
-
-$kardex-label-secondary: $_neutral-04;
-$kardex-label-secondary-darkMode: $_neutral-01;
-
-$kardex-bg-final-drop: $_kardex-07;
-
-$brand: $_primary-01;
-
-$btn-primary: $_primary-01;
-$btn-primary-hover: rgba($_primary-01, 75%);
-$btn-primary-disabled: rgba($_primary-01, 50%);
-$btn-primary-text: $_neutral-00;
-
-$btn-secondary: $_neutral-01;
-$btn-secondary-border: $_neutral-03;
-$btn-secondary-hover: $_neutral-03;
-$btn-secondary-disabled: rgba($_neutral-01, 50%);
-$btn-secondary-border-disabled: rgba($_neutral-03, 50%);
-$btn-text-disabled: rgba($text-primary, 75%);
-
-$btn-secondary-darkMode: $_neutral-07;
-$btn-secondary-border-darkMode: $_neutral-06;
-$btn-secondary-hover-darkMode: $_neutral-06;
-$btn-secondary-disabled-darkMode: rgba($_neutral-07, 50%);
-$btn-secondary-border-disabled-darkMode: rgba($_neutral-06, 50%);
-$btn-text-disabled-darkMode: rgba($text-primary-darkMode, 75%);
-
-$navigation-item-bg: $_neutral-03;
-$navigation-item-bg-darkMode: $_neutral-06;
+$kardex-01: #ff7f00;
+$kardex-02: #ffd300;
+$kardex-03: #ff00f5;
+$kardex-04: #d10c0c;
+$kardex-05: #4fb5ff;
+$kardex-06: #adaaaa;
+$kardex-07: #010038;
 
 $box-shadow-lightMode:
   0px -2px 1px 0px rgba(0, 0, 0, 0.05) inset,

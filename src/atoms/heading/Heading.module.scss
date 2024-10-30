@@ -19,3 +19,8 @@
 .h4 {
   @include mixins.heading-04;
 }
+
+.legend {
+  @include mixins.heading-01;
+  font-weight: 600;
+}
