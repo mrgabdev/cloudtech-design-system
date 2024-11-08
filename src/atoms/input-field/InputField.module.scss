@@ -5,16 +5,30 @@
 .input {
   background-color: var(--neutral-2);
   color: var(--text-primary);
-  outline: transparent 1px;
-  border: transparent 1px;
+  outline: 1px solid transparent;
+  border: 1px solid transparent;
   border-radius: 12px;
   height: 48px;
   width: 100%;
   padding: 12px;
   caret-color: var(--primary);
+  padding-left: 3em;
+}
+
+.input:focus {
+  border: 1px solid var(--primary-01-50);
 }
 
 .input::placeholder {
-  font-weight: 700;
-  color: var(--neutral-1);
+  font-weight: 600;
+  color: var(--neutral-3);
+}
+
+.input__icon svg {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  min-width: 24px;
+  min-height: 24px;
 }

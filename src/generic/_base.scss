@@ -1,52 +1,23 @@
-@use '../settings/colors';
+@use '../settings/theming' as *;
 @use '../settings/sizes';
 @use '../settings/typography';
 
 :root {
-  --neutral-1: #{colors.$neutral-01};
-  --neutral-2: #{colors.$neutral-02};
-  --neutral-3: #{colors.$neutral-03};
-  --text-primary: #{colors.$neutral-06};
-  --text-secondary: #{colors.$neutral-04};
-
-  --primary: #{colors.$primary-01};
-  --primary-2: #{colors.$primary-02};
-  --primary-3: #{colors.$primary-03};
-  --primary-4: #{colors.$primary-04};
-  --box-shadow: #{colors.$box-shadow-lightMode};
+  @include theme-light;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --neutral-1: #{colors.$neutral-07};
-    --neutral-2: #{colors.$neutral-08};
-    --neutral-3: #{colors.$neutral-06};
-    --text-primary: #{colors.$neutral-01};
-
-    --box-shadow: #{colors.$box-shadow-darkMode};
+    @include theme-dark;
   }
 }
 
 .light-theme {
-  --neutral-1: #{colors.$neutral-01};
-  --neutral-2: #{colors.$neutral-02};
-  --neutral-3: #{colors.$neutral-03};
-  --text-primary: #{colors.$neutral-06};
-  --text-secondary: #{colors.$neutral-04};
-
-  --primary: #{colors.$primary-01};
-  --primary-2: #{colors.$primary-02};
-  --primary-3: #{colors.$primary-03};
-  --primary-4: #{colors.$primary-04};
-  --box-shadow: #{colors.$box-shadow-lightMode};
+  @include theme-light;
 }
 
 .dark-theme {
-  --neutral-1: #{colors.$neutral-07};
-  --neutral-2: #{colors.$neutral-08};
-  --neutral-3: #{colors.$neutral-06};
-  --text-primary: #{colors.$neutral-01};
-  --box-shadow: #{colors.$box-shadow-darkMode};
+  @include theme-dark;
 }
 
 .story-dark {

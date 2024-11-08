@@ -17,13 +17,13 @@
   color: var(--text-primary);
 
   &:hover {
-    background-color: rgba(var(--primary), 75%);
+    background-color: var(--primary-01-75);
   }
 }
 
 .btn--secondary {
   background-color: var(--neutral-1);
-  border: 2px solid var(--neutral-3);
+  border: 2px solid var(--neutral-1);
 
   &:hover {
     background-color: var(--neutral-3);
@@ -31,11 +31,10 @@
 }
 
 .btn--disabled {
-  color: rgba(var(--text-primary), 75%);
+  opacity: 0.75;
 }
-
 .btn--primary.btn--disabled {
-  background-color: rgba(var(--primary), 50%);
+  background-color: var(--primary-01-50);
 }
 
 .btn--secondary.btn--disabled {

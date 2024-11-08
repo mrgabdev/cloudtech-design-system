@@ -1,0 +1,82 @@
+@use './colors' as *;
+
+@mixin theme-shared {
+  --primary: #{$primary-01};
+  --primary-01-25: #{$primary-01-25};
+  --primary-01-50: #{$primary-01-50};
+  --primary-01-75: #{$primary-01-75};
+
+  --primary-02: #{$primary-02};
+  --primary-02-25: #{$primary-02-25};
+  --primary-02-50: #{$primary-02-50};
+  --primary-02-75: #{$primary-02-75};
+
+  --primary-03: #{$primary-03};
+  --primary-03-25: #{$primary-03-25};
+  --primary-03-50: #{$primary-03-50};
+  --primary-03-75: #{$primary-03-75};
+
+  --primary-04: #{$primary-04};
+  --primary-04-25: #{$primary-04-25};
+  --primary-04-50: #{$primary-04-50};
+  --primary-04-75: #{$primary-04-75};
+
+  --text-secondary: #{$neutral-04};
+}
+
+@mixin theme-light {
+  @include theme-shared;
+
+  --neutral-1: #{$neutral-01};
+  --neutral-1-25: #{$neutral-01-25};
+  --neutral-1-50: #{$neutral-01-50};
+  --neutral-1-75: #{$neutral-01-75};
+
+  --neutral-2: #{$neutral-02};
+  --neutral-2-25: #{$neutral-02-25};
+  --neutral-2-50: #{$neutral-02-50};
+  --neutral-2-75: #{$neutral-02-75};
+
+  --neutral-3: #{$neutral-03};
+  --neutral-3-25: #{$neutral-03-25};
+  --neutral-3-50: #{$neutral-03-50};
+  --neutral-3-75: #{$neutral-03-75};
+
+  --text-primary-25: #{$neutral-06-25};
+  --text-primary-50: #{$neutral-06-50};
+  --text-primary-75: #{$neutral-06-75};
+  --box-shadow: #{$box-shadow-lightMode};
+
+  --text-primary: #{$neutral-06};
+  --text-primary-25: #{$neutral-06-25};
+  --text-primary-50: #{$neutral-06-50};
+  --text-primary-75: #{$neutral-06-75};
+
+  --box-shadow: #{$box-shadow-lightMode};
+}
+
+@mixin theme-dark {
+  @include theme-shared;
+
+  --neutral-1: #{$neutral-07};
+  --neutral-1-25: #{$neutral-07-25};
+  --neutral-1-50: #{$neutral-07-50};
+  --neutral-1-75: #{$neutral-07-75};
+
+  --neutral-2: #{$neutral-08};
+  --neutral-2-25: #{$neutral-08-25};
+  --neutral-2-50: #{$neutral-08-50};
+  --neutral-2-75: #{$neutral-08-75};
+
+  --neutral-3: #{$neutral-06};
+  --neutral-3-25: #{$neutral-06-25};
+  --neutral-3-50: #{$neutral-06-50};
+  --neutral-3-75: #{$neutral-06-75};
+
+  --text-primary: #{$neutral-01};
+  --text-primary-25: #{$neutral-01-25};
+  --text-primary-50: #{$neutral-01-50};
+  --text-primary-75: #{$neutral-01-75};
+
+  --box-shadow: #{$box-shadow-darkMode};
+}

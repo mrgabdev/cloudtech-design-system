@@ -18,7 +18,7 @@ interface Props {
 export const InputField = ({ type = 'text', iconLeft, ...props }: Props) => {
   return (
     <div className={styles['input-container']}>
-      {iconLeft && <span>{iconLeft}</span>}
+      {iconLeft && <span className={styles.input__icon}>{iconLeft}</span>}
       <input type={type} {...props} className={styles.input} />
     </div>
   )
