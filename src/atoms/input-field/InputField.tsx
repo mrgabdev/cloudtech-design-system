@@ -1,25 +1,53 @@
+'use client'
+import { HideEyeOutline, LockOutfilled, ShowEyeOutline } from '../../icons'
 import styles from './InputField.module.scss'
+import { InputHTMLAttributes, useState } from 'react'
 
-interface Props {
-  id?: string
-  name: string
-  type?: React.HTMLInputTypeAttribute
-  placeholder?: string
-  value?: string | number
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void
-  onBlur?: (event: React.ChangeEvent<HTMLInputElement>) => void
-  disabled?: boolean
-  required?: boolean
-  autoComplete?: string
-  className?: string
+interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   iconLeft?: React.ReactNode
 }
 
-export const InputField = ({ type = 'text', iconLeft, ...props }: Props) => {
+export const InputField = ({ ...props }: Props) => {
   return (
-    <div className={styles['input-container']}>
+    <InputWrapper>
+      {props.type === 'password' ? <PasswordInput {...props} /> : <InputDefault {...props} />}
+    </InputWrapper>
+  )
+}
+
+const InputWrapper = ({ children }: { children: React.ReactNode }) => {
+  return <div className={styles['input-container']}>{children}</div>
+}
+
+const InputDefault: typeof InputField = ({ type = 'text', iconLeft, ...props }) => {
+  return (
+    <>
       {iconLeft && <span className={styles.input__icon}>{iconLeft}</span>}
       <input type={type} {...props} className={styles.input} />
-    </div>
+    </>
+  )
+}
+
+const PasswordInput: typeof InputField = ({ ...props }) => {
+  const [visibility, setVisibility] = useState<Boolean>(false)
+  const [value, setValue] = useState<string | undefined>('')
+  const toggleVisibility = () => setVisibility((prev) => !prev)
+
+  return (
+    <>
+      <span className={styles.input__icon}>{<LockOutfilled />}</span>
+      <input
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        {...props}
+        type={visibility ? 'text' : 'password'}
+        className={styles.input}
+      />
+      {value !== undefined && value !== '' && (
+        <span className={styles.input__reveal} onClick={toggleVisibility}>
+          {visibility ? <HideEyeOutline /> : <ShowEyeOutline />}
+        </span>
+      )}
+    </>
   )
 }

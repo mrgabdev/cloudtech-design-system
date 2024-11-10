@@ -2,12 +2,11 @@
 
 import styles from './styles.module.scss'
 
-interface Props {
+interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   primary?: boolean
-  type?: 'submit' | 'reset' | 'button' | undefined
+
   children: React.ReactNode
-  action: () => void
-  disabled?: boolean
+
   endIcon?: React.ReactNode
 }
 
@@ -15,7 +14,7 @@ export const Button = ({
   primary,
   type = 'submit',
   children,
-  action,
+  onClick,
   endIcon,
   disabled = false
 }: Props) => {
@@ -24,7 +23,7 @@ export const Button = ({
   const isDisabled = disabled && styles['btn--disabled']
 
   return (
-    <button type={type} onClick={action} className={`${styles.btn} ${btnStyle} ${isDisabled}`}>
+    <button type={type} onClick={onClick} className={`${styles.btn} ${btnStyle} ${isDisabled}`}>
       {children}
       {endIcon}
     </button>

@@ -3,10 +3,13 @@
 .switch {
   background: var(--neutral-2);
   border-radius: 1em;
-  cursor: pointer;
   width: 100%;
 
   color: var(--text-secondary);
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .switch-item {
@@ -15,7 +18,13 @@
   align-items: center;
   padding: 4px 16px 4px 8px;
   gap: 8px;
-  font-size: 15px;
+  font-size: 13px;
+}
+
+@media (min-width: 768px) {
+  .switch-item {
+    font-size: 15px;
+  }
 }
 
 .switch-icon {
@@ -34,7 +43,7 @@
 }
 
 .switch--active {
-  background-color: var(--neutral-1);
+  background-color: var(--neutral-3);
   color: var(--text-primary);
   box-shadow: var(--box-shadow);
 }
