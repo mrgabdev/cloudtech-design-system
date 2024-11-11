@@ -12,7 +12,7 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 export const Button = ({
   primary,
-  type = 'submit',
+  type = 'button',
   children,
   onClick,
   endIcon,

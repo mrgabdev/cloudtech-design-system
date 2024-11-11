@@ -1,7 +1,7 @@
 .input-container {
   position: relative;
   display: flex;
-  background-color: var(--neutral-2);
+  background-color: var(--neutral-3);
   outline: 1px solid transparent;
   border: 1px solid transparent;
   border-radius: 12px;
@@ -11,6 +11,7 @@
 
   &:focus-within {
     border: 1px solid var(--primary-01-50);
+    background-color: var(--neutral-2);
   }
 }
 
@@ -27,7 +28,7 @@
 
   &::placeholder {
     font-weight: 600;
-    color: var(--neutral-3);
+    color: var(--text-secondary);
   }
 
   &[type='password']::-ms-reveal {

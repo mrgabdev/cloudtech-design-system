@@ -52,6 +52,8 @@
   --text-primary-50: #{$neutral-06-50};
   --text-primary-75: #{$neutral-06-75};
 
+  --text-neutral: #{$neutral-05};
+
   --box-shadow: #{$box-shadow-lightMode};
 }
 
@@ -77,6 +79,8 @@
   --text-primary-25: #{$neutral-01-25};
   --text-primary-50: #{$neutral-01-50};
   --text-primary-75: #{$neutral-01-75};
+
+  --text-neutral: #{$neutral-03};
 
   --box-shadow: #{$box-shadow-darkMode};
 }

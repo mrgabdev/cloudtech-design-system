@@ -30,20 +30,14 @@ const InputDefault: typeof InputField = ({ type = 'text', iconLeft, ...props }) 
 
 const PasswordInput: typeof InputField = ({ ...props }) => {
   const [visibility, setVisibility] = useState<Boolean>(false)
-  const [value, setValue] = useState<string | undefined>('')
+
   const toggleVisibility = () => setVisibility((prev) => !prev)
 
   return (
     <>
       <span className={styles.input__icon}>{<LockOutfilled />}</span>
-      <input
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
-        {...props}
-        type={visibility ? 'text' : 'password'}
-        className={styles.input}
-      />
-      {value !== undefined && value !== '' && (
+      <input {...props} type={visibility ? 'text' : 'password'} className={styles.input} />
+      {props.value !== undefined && props.value !== '' && (
         <span className={styles.input__reveal} onClick={toggleVisibility}>
           {visibility ? <HideEyeOutline /> : <ShowEyeOutline />}
         </span>
