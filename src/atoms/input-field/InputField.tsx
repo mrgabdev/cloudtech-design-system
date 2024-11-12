@@ -7,10 +7,14 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   iconLeft?: React.ReactNode
 }
 
-export const InputField = ({ ...props }: Props) => {
+export const InputField = ({ iconLeft, ...props }: Props) => {
   return (
     <InputWrapper>
-      {props.type === 'password' ? <PasswordInput {...props} /> : <InputDefault {...props} />}
+      {props.type === 'password' ? (
+        <PasswordInput {...props} />
+      ) : (
+        <InputDefault iconLeft={iconLeft} {...props} />
+      )}
     </InputWrapper>
   )
 }
@@ -19,7 +23,7 @@ const InputWrapper = ({ children }: { children: React.ReactNode }) => {
   return <div className={styles['input-container']}>{children}</div>
 }
 
-const InputDefault: typeof InputField = ({ type = 'text', iconLeft, ...props }) => {
+const InputDefault = ({ type = 'text', iconLeft, ...props }: Props) => {
   return (
     <>
       {iconLeft && <span className={styles.input__icon}>{iconLeft}</span>}
@@ -28,8 +32,8 @@ const InputDefault: typeof InputField = ({ type = 'text', iconLeft, ...props }) 
   )
 }
 
-const PasswordInput: typeof InputField = ({ ...props }) => {
-  const [visibility, setVisibility] = useState<Boolean>(false)
+const PasswordInput = ({ ...props }: Props) => {
+  const [visibility, setVisibility] = useState<boolean>(false)
 
   const toggleVisibility = () => setVisibility((prev) => !prev)
 

@@ -8,24 +8,24 @@ import { SwitchContainer } from '../../objects'
 import styles from './SwitchRoles.module.scss'
 
 enum Roles {
-  Aspirante = 'Aspirante',
-  Estudiante = 'Estudiante',
-  Maestro = 'Maestro'
+  Applicant = 'Aspirante',
+  Student = 'Estudiante',
+  Teacher = 'Maestro'
 }
 
 const ROLES = [
   {
-    role: Roles.Aspirante,
+    role: Roles.Applicant,
     icon: <ProfileCircledOutline />,
     activeIcon: <ProfileCircledFilled />
   },
   {
-    role: Roles.Estudiante,
+    role: Roles.Student,
     icon: <BriefCaseOutline />,
     activeIcon: <BriefCaseFilled />
   },
   {
-    role: Roles.Maestro,
+    role: Roles.Teacher,
     icon: <CoffeOutline />,
     activeIcon: <CoffeFilled />
   }

@@ -23,7 +23,7 @@
 }
 
 .btn--secondary {
-  background-color: var(--neutral-1);
+  background-color: var(--neutral-2);
   border: 2px solid var(--neutral-1);
 
   &:hover {
@@ -39,6 +39,6 @@
 }
 
 .btn--secondary.btn--disabled {
-  background-color: rgba(var(--neutral-1), 50%);
-  border-color: rgba(var(--neutral-3), 50%);
+  background-color: var(--neutral-1-75);
+  border-color: var(--neutral-3-50);
 }
