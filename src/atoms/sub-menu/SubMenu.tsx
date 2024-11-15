@@ -5,13 +5,13 @@ import { StartTree, EndTree, RightChevron } from './icon'
 import style from './SubMenu.module.scss'
 
 interface Props {
-  children: React.ReactNode | string
+  label: string
   url: string
   active: boolean
   onClick: () => void
 }
 
-export const SubMenu = ({ children, url, active = false, onClick }: Props) => {
+export const SubMenu = ({ label, url, active = false, onClick }: Props) => {
   return (
     <li className={style.submenu}>
       <div className={style.submenu__tree}>
@@ -24,7 +24,7 @@ export const SubMenu = ({ children, url, active = false, onClick }: Props) => {
         href={url}
         className={`${style.submenu__item} ${active && style['submenu__item--active']}`}
       >
-        {children}
+        {label}
         {active && <RightChevron />}
       </Link>
     </li>

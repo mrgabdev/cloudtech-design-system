@@ -1,2 +1,2 @@
 export { Container } from './container/Container'
-export { SwitchContainer } from './switch-container/SwitchContainer'
+export { SwitchContainer, SwitchContainerButton } from './switch-container/SwitchContainer'

@@ -7,3 +7,7 @@ interface Props {
 export const SwitchContainer = ({ children }: Props) => {
   return <div className={style['switch-container']}>{children}</div>
 }
+
+export const SwitchContainerButton = ({ children }: Props) => {
+  return <div className={style['switch-container-btn']}>{children}</div>
+}

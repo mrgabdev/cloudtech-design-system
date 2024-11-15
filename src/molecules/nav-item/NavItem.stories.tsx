@@ -49,15 +49,20 @@ export const Interactive = () => {
           active={current === 1}
           url='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
           onClick={() => toggleActive(1)}
-        >
-          Youtube
-        </SubMenu>
-        <SubMenu active={current === 2} url='https://google.com' onClick={() => toggleActive(2)}>
-          Google
-        </SubMenu>
-        <SubMenu active={current === 3} url='https://chatgpt.com/' onClick={() => toggleActive(3)}>
-          OpenAi
-        </SubMenu>
+          label='YouTube'
+        />
+        <SubMenu
+          active={current === 2}
+          url='https://google.com'
+          onClick={() => toggleActive(2)}
+          label='Google'
+        />
+        <SubMenu
+          active={current === 3}
+          url='https://chatgpt.com/'
+          onClick={() => toggleActive(3)}
+          label='OpenAI'
+        />
       </NavItem>
     </div>
   )

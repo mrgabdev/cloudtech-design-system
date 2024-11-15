@@ -17,6 +17,10 @@
   user-select: none; /* Standard syntax */
 }
 
+.navlist--hiden {
+  justify-content: center;
+}
+
 .navitem--active {
   color: var(--text-primary);
   background-color: var(--neutral-3);
@@ -27,8 +31,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 24px;
-  height: 24px;
+
+  & > svg {
+    min-width: 24px;
+    min-height: 24px;
+  }
 }
 
 .navitem__icon > svg > circle {
@@ -49,6 +56,7 @@
   color: var(--text-secondary);
   font-size: 15px;
   font-weight: 600;
+  text-transform: capitalize;
 }
 
 .navitem--active > .navitem__text {

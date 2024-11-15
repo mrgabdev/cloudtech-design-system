@@ -9,6 +9,8 @@ enum Theme {
 
 export const useTheme = () => {
   const [theme, setTheme] = useState<Theme>(Theme.light)
+  const isDark = theme === Theme.dark
+  const isLight = theme === Theme.light
 
   useEffect(() => {
     const localTheme: Theme = JSON.parse(localStorage.getItem('theme') || '""')
@@ -30,18 +32,27 @@ export const useTheme = () => {
     return
   }, [])
 
-  const isDark = theme === Theme.dark
-  const isLight = theme === Theme.light
-
-  const toggleTheme = (newTheme: Theme) => {
-    setTheme(newTheme)
+  const saveTheme = (newTheme: Theme) => {
     document.documentElement.className = newTheme
     localStorage.setItem('theme', JSON.stringify(newTheme))
+  }
+
+  const toggleTheme = () => {
+    const newTheme = theme === Theme.light ? Theme.dark : Theme.light
+
+    setTheme(newTheme)
+    saveTheme(newTheme)
+  }
+
+  const setNewTheme = (newTheme: Theme) => {
+    setTheme(newTheme)
+    saveTheme(newTheme)
   }
 
   return {
     isDark,
     isLight,
+    setNewTheme,
     toggleTheme,
     Theme
   }
