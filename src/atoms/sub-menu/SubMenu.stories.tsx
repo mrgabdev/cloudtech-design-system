@@ -15,7 +15,7 @@ type Story = StoryObj<typeof SubMenu>
 
 export const Base: Story = {
   args: {
-    children: 'Google',
+    label: 'Google',
     url: 'https://google.com',
     active: false
   },
@@ -43,18 +43,16 @@ export const List = () => {
         onClick={() => {
           handleMenu(1)
         }}
-      >
-        Google
-      </SubMenu>
+        label='Google'
+      />
       <SubMenu
         active={current === 2}
         url='https://youtube.com'
         onClick={() => {
           handleMenu(2)
         }}
-      >
-        Youtube
-      </SubMenu>
+        label='Youtube'
+      />
     </div>
   )
 }
