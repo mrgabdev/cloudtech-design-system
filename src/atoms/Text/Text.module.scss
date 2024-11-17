@@ -1,0 +1,64 @@
+@use '../../settings/typography' as t;
+
+// Base styles
+.base {
+  font-weight: t.$base-01-semi-weight;
+  font-size: t.$base-01-semi-size;
+  line-height: t.$base-01-semi-line-height;
+}
+
+.base-bold {
+  font-weight: t.$base-01-bold-weight;
+  font-size: t.$base-01-bold-size;
+  line-height: t.$base-01-bold-line-height;
+}
+
+.base-2 {
+  font-weight: t.$base-02-semi-weight;
+  font-size: t.$base-02-semi-size;
+  line-height: t.$base-02-semi-line-height;
+}
+
+// Body styles
+.body-medium {
+  font-weight: t.$body-01-medium-weight;
+  font-size: t.$body-01-medium-size;
+  line-height: t.$body-01-medium-line-height;
+}
+
+.body-semi {
+  font-weight: t.$body-01-semi-weight;
+  font-size: t.$body-01-semi-size;
+  line-height: t.$body-01-semi-line-height;
+}
+
+.body-2 {
+  font-weight: t.$body-02-semi-weight;
+  font-size: t.$body-02-semi-size;
+  line-height: t.$body-02-semi-line-height;
+}
+
+// Caption styles
+.caption {
+  font-weight: t.$caption-01-semi-weight;
+  font-size: t.$caption-01-semi-size;
+  line-height: t.$caption-01-semi-line-height;
+}
+
+.caption-medium {
+  font-weight: t.$caption-01-medium-weight;
+  font-size: t.$caption-01-medium-size;
+  line-height: t.$caption-01-medium-line-height;
+}
+
+.caption-2 {
+  font-weight: t.$caption-02-bold-weight;
+  font-size: t.$caption-02-bold-size;
+  line-height: t.$caption-02-bold-line-height;
+}
+
+.caption-2-medium {
+  font-weight: t.$caption-02-medium-weight;
+  font-size: t.$caption-02-medium-size;
+  line-height: t.$caption-02-medium-line-height;
+}
