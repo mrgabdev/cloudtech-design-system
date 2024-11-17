@@ -1,0 +1,26 @@
+@use '../../settings/colors' as c;
+
+.status {
+  display: inline-flex;
+  padding: 4px 8px;
+  border-radius: 6px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: c.$neutral-07;
+  font-weight: 700;
+  text-transform: capitalize;
+  user-select: none;
+}
+
+.status--pending {
+  background-color: var(--secondary-01);
+}
+
+.status--done {
+  background-color: var(--secondary-04);
+}
+
+.status--reviewing {
+  background-color: var(--secondary-05);
+}
