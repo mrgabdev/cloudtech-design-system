@@ -21,6 +21,10 @@
   @include mixins.heading-04;
 }
 
+.h5 {
+  @include mixins.heading-05;
+}
+
 .legend {
   @include mixins.heading-02;
   font-weight: 600;

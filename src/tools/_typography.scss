@@ -28,6 +28,12 @@
   @include heading;
 }
 
+@mixin heading-05 {
+  font-size: t.$h5;
+  line-height: t.$h5-lh;
+  @include heading;
+}
+
 @mixin title-01 {
   font-size: clamp(t.$title-01-semi, 1.081rem + 0.188vw, t.$title-01-semi-mobile);
   line-height: t.$title-01-lh;

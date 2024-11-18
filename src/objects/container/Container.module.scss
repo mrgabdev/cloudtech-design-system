@@ -1,13 +1,12 @@
 @use '../../settings/sizes';
 
 .container {
-  margin: 16px;
   padding: 24px;
   border-radius: 8px;
   background-color: var(--neutral-1);
+  width: 100%;
 
   @media (min-width: sizes.$desktop) {
-    margin: 40px;
     margin-top: 24px;
   }
 }

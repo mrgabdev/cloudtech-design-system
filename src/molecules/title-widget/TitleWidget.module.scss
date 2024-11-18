@@ -4,7 +4,10 @@
   display: flex;
   gap: 16px;
   flex-direction: row-reverse;
+  justify-content: flex-end;
   align-items: center;
+
+  margin-bottom: 30px;
 }
 
 .title__widget {

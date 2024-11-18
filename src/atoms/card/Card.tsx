@@ -6,5 +6,5 @@ interface Props {
 }
 
 export const Card = ({ children, className = '' }: Props) => {
-  return <section className={`${style.card} ${className}`}>{children}</section>
+  return <div className={`${style.card} ${className}`}>{children}</div>
 }
