@@ -5,12 +5,12 @@ interface Props {
 }
 
 const STATUS = {
-  pending: {
+  pendiente: {
     label: 'pendiente',
     style: style['status--pending']
   },
-  done: { label: 'finalizado', style: style['status--done'] },
-  reviewing: {
+  finalizado: { label: 'finalizado', style: style['status--done'] },
+  'en revision': {
     label: 'en revision',
     style: style['status--reviewing']
   }
