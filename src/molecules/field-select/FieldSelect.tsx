@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import style from './CustomSelect.module.scss'
+import style from './FieldSelect.module.scss'
 
 interface Option {
   value: string
@@ -15,7 +15,7 @@ interface Props {
   name: string
 }
 
-export const CustomSelect = ({
+export const FieldSelect = ({
   options = [],
   placeholder = 'Selecciona una opción',
   value,
