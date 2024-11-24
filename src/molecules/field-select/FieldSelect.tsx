@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import style from './FieldSelect.module.scss'
 
 interface Option {
@@ -23,6 +23,7 @@ export const FieldSelect = ({
   name
 }: Props) => {
   const [isOpen, setIsOpen] = useState(false)
+  const dropdownRef = useRef<HTMLDivElement>(null)
 
   const handleSelect = (option: Option) => {
     const event = {
@@ -34,6 +35,19 @@ export const FieldSelect = ({
     onChange(event)
     setIsOpen(false)
   }
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsOpen(false)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [])
 
   return (
     <div className={style.selectContainer}>
