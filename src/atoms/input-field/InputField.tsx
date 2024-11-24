@@ -9,16 +9,16 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
 
 const factoryInput = {
   password: (props: Props) => <PasswordInput {...props} />,
-  default: (props: Props) => <InputDefault {...props} />
+  default: ({ iconLeft, ...props }: Props) => <InputDefault iconLeft={iconLeft} {...props} />
 }
 
-export const InputField = ({ iconLeft, ...props }: Props) => {
+export const InputField = ({ ...props }: Props) => {
   const FieldComponent =
     factoryInput[props.type as keyof typeof factoryInput] || factoryInput.default
 
   return (
     <InputWrapper>
-      <FieldComponent iconLeft={iconLeft} {...props} />
+      <FieldComponent {...props} />
     </InputWrapper>
   )
 }
@@ -36,14 +36,14 @@ const InputDefault = ({ type = 'text', iconLeft, ...props }: Props) => {
   )
 }
 
-const PasswordInput = ({ ...props }: Props) => {
+const PasswordInput = ({ iconLeft = <LockOutfilled />, ...props }: Props) => {
   const [visibility, setVisibility] = useState<boolean>(false)
 
   const toggleVisibility = () => setVisibility((prev) => !prev)
 
   return (
     <>
-      <span className={styles.input__icon}>{<LockOutfilled />}</span>
+      <span className={styles.input__icon}>{iconLeft}</span>
       <input {...props} type={visibility ? 'text' : 'password'} className={styles.input} />
       {props.value !== undefined && props.value !== '' && (
         <span className={styles.input__reveal} onClick={toggleVisibility}>
