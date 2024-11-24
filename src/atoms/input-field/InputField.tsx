@@ -1,20 +1,24 @@
 'use client'
 import { HideEyeOutline, LockOutfilled, ShowEyeOutline } from '../../icons'
 import styles from './InputField.module.scss'
-import { InputHTMLAttributes, useState } from 'react'
+import { useState } from 'react'
 
 interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   iconLeft?: React.ReactNode
 }
 
+const factoryInput = {
+  password: (props: Props) => <PasswordInput {...props} />,
+  default: (props: Props) => <InputDefault {...props} />
+}
+
 export const InputField = ({ iconLeft, ...props }: Props) => {
+  const FieldComponent =
+    factoryInput[props.type as keyof typeof factoryInput] || factoryInput.default
+
   return (
     <InputWrapper>
-      {props.type === 'password' ? (
-        <PasswordInput {...props} />
-      ) : (
-        <InputDefault iconLeft={iconLeft} {...props} />
-      )}
+      <FieldComponent iconLeft={iconLeft} {...props} />
     </InputWrapper>
   )
 }
