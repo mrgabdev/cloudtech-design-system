@@ -50,7 +50,7 @@ export const FieldSelect = ({
   }, [])
 
   return (
-    <div className={style.selectContainer}>
+    <div className={style.selectContainer} ref={dropdownRef}>
       <div className={style.selected} onClick={() => setIsOpen(!isOpen)}>
         {options.find((option) => option.value === value)?.label || placeholder}
         <span className={style.arrow}>&#9660;</span>
