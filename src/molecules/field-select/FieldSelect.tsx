@@ -52,7 +52,8 @@ export const FieldSelect = ({
   return (
     <div className={style.selectContainer} ref={dropdownRef}>
       <div className={style.selected} onClick={() => setIsOpen(!isOpen)}>
-        {options.find((option) => option.value === value)?.label || placeholder}
+        {options.find((option) => option.value.toLowerCase() == value.toLowerCase())?.label ||
+          placeholder}
         <span className={style.arrow}>&#9660;</span>
       </div>
       {isOpen && (
