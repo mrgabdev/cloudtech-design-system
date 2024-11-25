@@ -7,7 +7,7 @@ interface Option {
   label: string
 }
 
-interface Props {
+interface Props extends React.SelectHTMLAttributes<HTMLSelectElement> {
   options: Option[]
   placeholder?: string
   value: string
@@ -20,7 +20,8 @@ export const FieldSelect = ({
   placeholder = 'Selecciona una opción',
   value,
   onChange,
-  name
+  name,
+  disabled
 }: Props) => {
   const [isOpen, setIsOpen] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
@@ -56,13 +57,13 @@ export const FieldSelect = ({
           placeholder}
         <span className={style.arrow}>&#9660;</span>
       </div>
-      {isOpen && (
+      {!disabled && isOpen && (
         <div className={style.options}>
           {options.map((option) => (
             <div
-              key={option.value}
+              key={`${option.value}${option.label}`}
               className={style.option}
-              onClick={() => handleSelect(option)} // Seleccionamos la opción
+              onClick={() => handleSelect(option)}
             >
               {option.label}
             </div>

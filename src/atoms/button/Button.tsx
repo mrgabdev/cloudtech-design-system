@@ -27,6 +27,7 @@ export const Button = ({
       type={type}
       onClick={onClick}
       className={`${styles.btn} ${btnStyle} ${isDisabled} ${className}`}
+      disabled={disabled}
     >
       {children}
       {endIcon}
